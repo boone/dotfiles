@@ -22,6 +22,7 @@ autocmd VimEnter * wincmd p
 
 nnoremap <Leader>s :Gstatus<Enter>
 nnoremap <Leader>c :Gcommit<Enter>
+nnoremap <Leader>r :CommandTFlush<Enter>
 
 "split a vertical window and go for it
 nnoremap <leader>w <C-w>v<C-w>l
