@@ -32,4 +32,4 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 "to use ack `
 let g:ackprg="ack-grep -H --nocolor --nogroup --column -ia" 
-nnoremap <Leader>
+nnoremap <Leader>a <Esc>:Ack 
