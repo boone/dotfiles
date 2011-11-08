@@ -2,6 +2,12 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set nocompatible
+
+
+"Git
+set statusline+=%{fugitive#statusline()}
+
 set number
 set ignorecase
 set incsearch
