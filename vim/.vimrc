@@ -111,3 +111,5 @@ au BufRead,BufNew Guardfile set ft=ruby
 au BufRead,BufNew Procfile set ft=ruby
 au BufRead,BufNew *.json set ft=javascript
 
+au FocusLost * :wa
+au BufWrite * :call DeleteTrailingWS()
