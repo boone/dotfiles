@@ -29,9 +29,8 @@ autocmd BufWritePre * :%s/\s\s\+$//e
 
 " Fast editing of the .vimrc
 map <leader>e :e! ~/.vimrc<cr>
-
-" When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vimrc
+" Fast editing of the .bash_profile
+map <leader>p :e! ~/.bash_profile<cr>
 
 " No sound on errors
 set noerrorbells
