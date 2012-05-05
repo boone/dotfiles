@@ -51,6 +51,7 @@ noremap! <Right> <Esc>
 
 " Turn backup off, since most stuff is in SVN, git anyway...
 set nobackup
+set nowritebackup
 set nowb
 set noswapfile
 
