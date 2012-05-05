@@ -99,3 +99,15 @@ set autowriteall
 au FocusLost * :wa
 au BufNewFile,BufRead *.less set filetype=less
 set rnu
+
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+
+au BufRead,BufNew *.coffee set ft=coffee
+au BufRead,BufNew *.ru set ft=ruby
+au BufRead,BufNew *.html.erb set ft=eruby.html
+au BufRead,BufNew Vagrantfile set ft=ruby
+au BufRead,BufNew Gemfile set ft=ruby
+au BufRead,BufNew Guardfile set ft=ruby
+au BufRead,BufNew Procfile set ft=ruby
+au BufRead,BufNew *.json set ft=javascript
+
