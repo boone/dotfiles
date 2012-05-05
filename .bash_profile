@@ -4,7 +4,6 @@ PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin/\:$PATH
 
 alias ls="ls -G"
 alias g="git"
-source ~/.git-completion.bash
 
 # PS1
 export PS1='\w$(__git_ps1 "(%s)") > '
