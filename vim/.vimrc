@@ -21,6 +21,9 @@ set directory=/tmp
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
+"syntax check
+autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
+
 " Fast saving
 nmap <leader>s :w!<cr>
 nmap <leader>q :q!<cr>
