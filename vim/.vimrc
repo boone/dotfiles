@@ -8,7 +8,6 @@ call vundle#rc()
 
 "Vundle
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-pathogen'
 Bundle 'wincent/Command-T'
 Bundle 'ervandew/supertab'
 Bundle 'nanotech/jellybeans.vim'
