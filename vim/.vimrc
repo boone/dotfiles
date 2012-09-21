@@ -1,11 +1,51 @@
-call pathogen#infect()
 syntax on
 filetype plugin indent on
 
 set nocompatible
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"Vundle
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-pathogen'
+Bundle 'wincent/Command-T'
+Bundle 'ervandew/supertab'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-haml'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'bbommarito/vim-slim'
+Bundle 'bufexplorer.zip'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+
+Bundle 'rodjek/vim-puppet'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
+Bundle 'lunaru/vim-less'
+Bundle 'bbommarito/vim-slim'
+Bundle 'tpope/vim-markdown'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
+" Show a brighter cursorline
+let g:jellybeans_overrides = {
+      \    'CursorLine': { 'guifg': '',   'guibg': '444444',
+      \                    'ctermfg': '', 'ctermbg': '000000',
+      \                    'attr': '' },
+      \}
+
+call pathogen#infect()
+
 "Git
 set statusline+=%{fugitive#statusline()}
+
+"SyuperTab
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 set hidden
 set number
@@ -18,15 +58,14 @@ set expandtab
 set go-=T "hide toolbar
 set directory=/tmp
 
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
-"syntax check
-autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
+nmap <leader>r :bufdo e!<cr>
 
 " Fast saving
-nmap <leader>s :w!<cr>
-nmap <leader>q :q!<cr>
+" nmap <leader>s :w!<cr>
+nmap <leader>q :wq<cr>
 
 autocmd BufWritePre * :%s/\s\s\+$//e
 
@@ -73,8 +112,8 @@ autocmd BufWrite *.js :call DeleteTrailingWS()
 "to use ack `
 nnoremap <Leader>a <Esc>:Ack
 
-" nnoremap <Leader>s :Gstatus<Enter>
-nnoremap <Leader>c :Gcommit<Enter>
+nnoremap <Leader>s :Gstatus<Enter>
+nnoremap <Leader>m :Gcommit<Enter>
 nnoremap <Leader>f :CommandTFlush<Enter>
 
 
@@ -85,6 +124,7 @@ nnoremap <Leader>n :NERDTree<Enter>
 
 "split a vertical window and go for it
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>h :split<Enter><C-w>j
 "to move around the windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -96,7 +136,11 @@ set backspace=2
 
 syntax enable
 set background=dark
-colorscheme solarized
+set bg=dark
+" colorscheme solarized
+colorscheme jellybeans
+highlight LineNr ctermfg=grey
+
 set autowrite
 set autowriteall
 au FocusLost * :wa
@@ -107,6 +151,7 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 
 au BufRead,BufNew *.coffee set ft=coffee
 au BufRead,BufNew *.ru set ft=ruby
+au BufRead,BufNew *.rb set ft=ruby
 au BufRead,BufNew *.html.erb set ft=eruby.html
 au BufRead,BufNew Vagrantfile set ft=ruby
 au BufRead,BufNew Gemfile set ft=ruby
@@ -116,3 +161,7 @@ au BufRead,BufNew *.json set ft=javascript
 
 au FocusLost * :wa
 au BufWrite * :call DeleteTrailingWS()
+
+autocmd BufNewFile,BufRead *.scss             set ft=scss.css
+set omnifunc=csscomplete#CompleteCSS
+
