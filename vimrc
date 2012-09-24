@@ -8,7 +8,7 @@ call vundle#rc()
 
 "Vundle
 Bundle 'gmarik/vundle'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-bundler'
@@ -113,7 +113,7 @@ nnoremap <Leader>a <Esc>:Ack
 
 nnoremap <Leader>s :Gstatus<Enter>
 nnoremap <Leader>m :Gcommit<Enter>
-nnoremap <Leader>f :CommandTFlush<Enter>
+nnoremap <Leader>t :CtrlP<Enter>
 
 
 nnoremap <Leader>b :BufExplorer<Enter>
