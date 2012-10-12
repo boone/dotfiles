@@ -136,6 +136,33 @@ set backspace=2
 syntax enable
 set background=dark
 set bg=dark
+
+" Git grep
+
+func GitGrep(...)
+  let save = &grepprg
+  set grepprg=git\ grep\ -n\ $*
+  let s = 'grep'
+  for i in a:000
+    let s = s . ' ' . i
+  endfor
+  exe s
+  let &grepprg = save
+endfun
+command -nargs=? G call GitGrep(<f-args>)
+
+" run git grep on the word under the cursor
+func GitGrepWord()
+  normal! "zyiw
+  call GitGrep('-w -e ', getreg('z'))
+endf
+nmap <C-f> :call GitGrepWord()<CR>
+
+" open quickfix and some movements
+nnoremap <C-l> :cw<Enter>
+nnoremap <C-n> :cnext<Enter>
+nnoremap <C-a> :cprev<Enter>
+
 " colorscheme solarized
 colorscheme jellybeans
 highlight LineNr ctermfg=grey
