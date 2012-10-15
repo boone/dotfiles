@@ -2,6 +2,7 @@ syntax on
 filetype plugin indent on
 
 set nocompatible
+set encoding=utf-8
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
