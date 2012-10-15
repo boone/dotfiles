@@ -1,5 +1,6 @@
 syntax on
 filetype plugin indent on
+set term=screen-256color
 
 set nocompatible
 set encoding=utf-8
