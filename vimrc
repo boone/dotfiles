@@ -22,7 +22,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
-
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'rodjek/vim-puppet'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
