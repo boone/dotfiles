@@ -193,3 +193,7 @@ au BufWrite * :call DeleteTrailingWS()
 autocmd BufNewFile,BufRead *.scss             set ft=scss.css
 set omnifunc=csscomplete#CompleteCSS
 
+" powerline
+let g:Powerline_symbols = 'fancy'
+
+
