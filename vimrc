@@ -1,9 +1,5 @@
-syntax on
-filetype plugin indent on
-set term=screen-256color
-
 set nocompatible
-set encoding=utf-8
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -11,7 +7,6 @@ call vundle#rc()
 "Vundle
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
-Bundle 'ervandew/supertab'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-haml'
@@ -33,14 +28,20 @@ Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
+set encoding=utf-8
+
+syntax on
+" Show a brighter cursorline
+set term=screen-256color
+
+
+filetype plugin indent on
 " Show a brighter cursorline
 let g:jellybeans_overrides = {
       \    'CursorLine': { 'guifg': '',   'guibg': '444444',
       \                    'ctermfg': '', 'ctermbg': '000000',
       \                    'attr': '' },
       \}
-
-call pathogen#infect()
 
 "Git
 set statusline+=%{fugitive#statusline()}
