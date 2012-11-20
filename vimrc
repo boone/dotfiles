@@ -162,7 +162,6 @@ endf
 nmap <C-f> :call GitGrepWord()<CR>
 
 " open quickfix and some movements
-nnoremap <C-l> :cw<Enter>
 nnoremap <C-n> :cnext<Enter>
 nnoremap <C-a> :cprev<Enter>
 
