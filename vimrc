@@ -5,33 +5,29 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 "Vundle
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'bufexplorer.zip'
 Bundle 'gmarik/vundle'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'lunaru/vim-less'
 Bundle 'nanotech/jellybeans.vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'rodjek/vim-puppet'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
-Bundle 'bufexplorer.zip'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'rodjek/vim-puppet'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'lunaru/vim-less'
-Bundle 'tpope/vim-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'briancollins/vim-jst'
 set encoding=utf-8
 
 syntax on
-" Show a brighter cursorline
-set term=screen-256color
 
+let mapleader = ","
 
 filetype plugin indent on
 " Show a brighter cursorline
@@ -107,6 +103,7 @@ func! DeleteTrailingWS()
 endfunc
 
 autocmd BufWrite *.rb :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.js :call DeleteTrailingWS()
 
 "to use ack `
@@ -118,9 +115,9 @@ nnoremap <Leader>t :CtrlP<Enter>
 
 
 nnoremap <Leader>b :BufExplorer<Enter>
-
-nnoremap <Leader>c :NERDTreeClose<Enter>
-nnoremap <Leader>n :NERDTree<Enter>
+" Focus on nerdtree
+map <silent> <C-m> :NERDTreeFocus<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 "split a vertical window and go for it
 nnoremap <leader>w <C-w>v<C-w>l
@@ -138,30 +135,9 @@ syntax enable
 set background=dark
 set bg=dark
 
-" Git grep
-
-func GitGrep(...)
-  let save = &grepprg
-  set grepprg=git\ grep\ -n\ $*
-  let s = 'grep'
-  for i in a:000
-    let s = s . ' ' . i
-  endfor
-  exe s
-  let &grepprg = save
-endfun
-command -nargs=? G call GitGrep(<f-args>)
-
-" run git grep on the word under the cursor
-func GitGrepWord()
-  normal! "zyiw
-  call GitGrep('-w -e ', getreg('z'))
-endf
-nmap <C-f> :call GitGrepWord()<CR>
-
 " open quickfix and some movements
-nnoremap <C-n> :cnext<Enter>
-nnoremap <C-a> :cprev<Enter>
+" nnoremap <C-n> :cnext<Enter>
+" nnoremap <C-a> :cprev<Enter>
 
 " colorscheme solarized
 colorscheme jellybeans
@@ -218,3 +194,6 @@ set statusline+=\ \|%L\ lines\| "total lines
 set statusline+=\ %P            "percent through file
 set laststatus=2
 
+"auto source vic
+map <leader>vimrc :tabe ~/.vimrc<cr>
+au! BufWritePost .vimrc source %
