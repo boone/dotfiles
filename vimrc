@@ -171,6 +171,7 @@ nnoremap <leader>n :tabNext<Enter>
 "split a vertical window and go for it
 nnoremap <leader>w <C-w>v<C-w>l
 noremap <leader>/ :tabe ~/dotfiles/vim/snippets/ruby.snippets<cr>
+noremap <leader>// :tabe ~/.vim/bundle/vim-snippets/snippets/ruby.snippets<cr>
 nnoremap <leader>h :split<Enter><C-w>j
 "to move around the windows
 nnoremap <C-h> <C-w>h
@@ -460,3 +461,6 @@ nnoremap <leader>3 :call Gotobackstage()<cr>
 nnoremap <leader>4 :call Gotoorder()<cr>
 vmap <Leader>z :call I18nTranslateString()<CR>
 autocmd VimEnter * echo ">^.^<"
+
+" to also copy to clipboard
+set clipboard=unnamed
