@@ -1,3 +1,5 @@
+set shell=/bin/bash
+set noshelltemp
 set nocompatible
 filetype off
 
@@ -13,7 +15,8 @@ Bundle "vim-ruby/vim-ruby"
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'bufexplorer.zip'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
+"Bundle 'kien/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
 "comments
@@ -455,12 +458,25 @@ function! Gotoorder()
   CtrlPClearAllCaches
 endfunction
 
+function! Gotowormhole()
+  cd ~/source/site5/wormhole
+  NERDTree ~/source/site5/wormhole
+  CtrlPClearAllCaches
+endfunction
+
 nnoremap <leader>1 :call Gotocore()<cr>
 nnoremap <leader>2 :call Gotohelix()<cr>
 nnoremap <leader>3 :call Gotobackstage()<cr>
 nnoremap <leader>4 :call Gotoorder()<cr>
+nnoremap <leader>5 :call Gotowormhole()<cr>
 vmap <Leader>z :call I18nTranslateString()<CR>
 autocmd VimEnter * echo ">^.^<"
 
 " to also copy to clipboard
 set clipboard=unnamed
+
+if executable("ag")
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
+nmap <Leader>b :NERDTreeFind<CR>
