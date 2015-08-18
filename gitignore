@@ -1,0 +1,17 @@
+pkg/*
+*.gem
+.bundle
+*.swp
+*~
+.powrc
+.DS_Store
+.ruby-version
+.tags
+.spin.rb
+spec/support/zzz_spin.rb
+.gitattributes
+tags
+.ruby-version
+ruby-lint.yml
+.vagrant
+unicorn-dev.rb
