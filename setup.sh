@@ -25,4 +25,4 @@ else
 fi
 
 vim +BundleInstall +qall
-vim +BundleClean
+vim +BundleClean +qall
