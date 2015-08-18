@@ -4,7 +4,7 @@ This repository contains my . files to help me to clone my preferences accross d
 
 ### Take a Look
 
-If you want to see these dotfiles in action before cloning to your machine use
+If you want to see these dotfiles in action before running in your machine use
 Vagrant:
 
 ```sh
