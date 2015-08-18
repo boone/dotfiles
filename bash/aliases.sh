@@ -49,3 +49,5 @@ alias vp="vagrant provision"
 
 # whatever
 alias killruby="killall -9 ruby"
+
+alias reload="source ~/.bash_profile"
