@@ -3,4 +3,5 @@
 vim/bundle
 .DS_Store
 vim/conf/custom/*
+bash/custom/*
 .vagrant
