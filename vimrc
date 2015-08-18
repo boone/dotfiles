@@ -42,6 +42,8 @@ Bundle "rking/ag.vim"
 Bundle "mattn/emmet-vim"
 Bundle "ervandew/supertab"
 Bundle "stefanoverna/vim-i18n"
+Bundle "tmhedberg/matchit"
+Bundle "ecomba/vim-ruby-refactoring"
 
 set encoding=utf-8
 set t_Co=256
@@ -463,6 +465,9 @@ function! Gotowormhole()
   NERDTree ~/source/site5/wormhole
   CtrlPClearAllCaches
 endfunction
+
+"open Marked
+nnoremap <leader>0 :exec ":!open -a Marked " . expand('%:p')<cr>
 
 nnoremap <leader>1 :call Gotocore()<cr>
 nnoremap <leader>2 :call Gotohelix()<cr>
