@@ -41,20 +41,6 @@ alias fixup='git add -A . && git ci -m "fixup"'
 alias rebase='rm -f /tmp/last_branch; (echo `git branch | sed -n "/\* /s///p"`) > /tmp/last_branch; git checkout master; git pull --rebase; git checkout `cat /tmp/last_branch`; git rebase master'
 
 # Projects
-alias monocle='cd /Users/nakamura/source/Monocle'
-alias helix='cd /Users/nakamura/source/site5/helix'
-alias glados='cd /Users/nakamura/source/site5/glados'
-alias san='cd /Users/nakamura/source/site5/software_dev_ansible'
-alias data='cd /Users/nakamura/source/site5/data'
-alias worm='cd /Users/nakamura/source/site5/wormhole'
-alias helix_boxed='cd /Users/nakamura/source/site5/helix_boxed'
-alias helix_core='cd /Users/nakamura/source/site5/helix_core'
-alias backstage='cd /Users/nakamura/source/site5/backstage'
-alias event_horizon='cd /Users/nakamura/source/site5/event_horizon'
-alias picturalia='cd /Users/nakamura/source/picturalia'
-alias gallery='cd /Users/nakamura/source/gallery'
-alias nigiri='cd /Users/nakamura/source/nigiri'
-alias spectre='/Users/nakamura/source/Site5\ other/spectre'
 
 # Vagrant alias
 alias vs="vagrant status"
