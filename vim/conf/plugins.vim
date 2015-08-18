@@ -17,7 +17,6 @@ Bundle 'pangloss/vim-javascript'
 "comments
 Bundle 'scrooloose/nerdcommenter'
 "file tree
-Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
@@ -27,7 +26,6 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
-Bundle "kien/rainbow_parentheses.vim"
 Bundle "tpope/vim-surround"
 Bundle "croaker/mustang-vim"
 Bundle "godlygeek/tabular"
