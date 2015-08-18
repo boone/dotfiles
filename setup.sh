@@ -2,13 +2,13 @@
 
 echo "Creating symlinks..."
 
-symlinks=( vimrc vim )
+symlinks=( vim vimrc )
 
 for link in ${symlinks[@]}; do
   target="`pwd`/${link}"
   link_name="${HOME}/.${link}"
   if ! [[ -L $link_name ]]; then
-    echo "  LINK - ${link_name}"
+    echo "  LINK - ${link_name} | TARGET - ${target}"
     ln -s $target $link_name
   else
     echo "  SKIP - ${link_name}"
@@ -25,3 +25,4 @@ else
 fi
 
 vim +BundleInstall +qall
+vim +BundleClean
