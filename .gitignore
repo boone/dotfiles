@@ -2,3 +2,5 @@
 .netrwhist
 vim/bundle
 .DS_Store
+vim/conf/custom/*
+.vagrant
