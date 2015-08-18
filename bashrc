@@ -7,4 +7,6 @@ for file in ~/.bash/custom/; do
   fi
 done
 
-eval "$(rbenv init -)"
+if [ -d ~/.rbenv ]; then
+  eval "$(rbenv init -)"
+fi
