@@ -45,5 +45,3 @@ for link in ${bash_files[@]}; do
     echo "    SKIP - ${link_name}"
   fi
 done
-
-source $HOME/.bashrc
