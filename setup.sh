@@ -47,4 +47,11 @@ else
   echo "  SKIP - .bashrc"
 fi
 
+if ! [[ -e $HOME/.gitconfig ]]; then
+  echo "  Linking gitconfig"
+  ln -s `pwd`/gitconfig $HOME/.gitconfig
+else
+  echo "  SKIP - .gitconfig"
+fi
+
 source $HOME/.bashrc
