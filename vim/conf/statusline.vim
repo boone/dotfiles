@@ -16,8 +16,6 @@ set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
 set statusline+=%=              "left/right separator
 set statusline+=%*              "show the errors/warning in the status line
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 set statusline+=%=              "left/right separator
 set statusline+=%h\ \           "help file flag
 set statusline+=[%l,%c]         "cursor line,column
