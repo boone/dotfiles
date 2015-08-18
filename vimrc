@@ -1,5 +1,5 @@
-source $HOME/.vim/conf/defaults.vim
 source $HOME/.vim/conf/plugins.vim
+source $HOME/.vim/conf/defaults.vim
 source $HOME/.vim/conf/functions.vim
 source $HOME/.vim/conf/maps.vim
 source $HOME/.vim/conf/auto.vim

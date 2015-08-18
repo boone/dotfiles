@@ -1,7 +1,5 @@
 set shell=/bin/bash
 
-colorscheme mustang
-
 set noshelltemp
 set nocompatible
 set encoding=utf-8
@@ -56,3 +54,5 @@ set clipboard=unnamed
 
 " CTRLP
 let g:ctrlp_working_path_mode = 'rw'
+
+colorscheme hybrid

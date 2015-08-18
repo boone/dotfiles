@@ -12,7 +12,6 @@ Bundle 'bufexplorer.zip'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'ctrlpvim/ctrlp.vim'
 "Bundle 'kien/ctrlp.vim'
-Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
 "comments
 Bundle 'scrooloose/nerdcommenter'
@@ -27,7 +26,6 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tpope/vim-surround"
-Bundle "croaker/mustang-vim"
 Bundle "godlygeek/tabular"
 Bundle 'thoughtbot/vim-rspec'
 Bundle "rking/ag.vim"
