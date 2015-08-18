@@ -2,13 +2,18 @@
 
 echo "Creating symlinks..."
 
-if ! [[ -L $HOME/vimrc ]]; then
-  ln -s `pwd`/vimrc $HOME/.vimrc
-fi
+symlinks=( vimrc vim )
 
-if ! [[ -L $HOME/vim ]]; then
-  ln -s `pwd`/vim/ $HOME/.vim
-fi
+for link in ${symlinks[@]}; do
+  target="`pwd`/${link}"
+  link_name="${HOME}/.${link}"
+  if ! [[ -L $link_name ]]; then
+    echo "  LINK - ${link_name}"
+    ln -s $target $link_name
+  else
+    echo "  SKIP - ${link_name}"
+  fi
+done
 
 echo
 
