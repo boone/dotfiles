@@ -34,6 +34,7 @@ nnoremap <C-l> <C-w>l
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 nmap <Leader>b :NERDTreeFind<CR>
+nmap <C-b> :NERDTreeFind<CR>
 
 " Git
 nnoremap <Leader>m :Gcommit<Enter>
