@@ -17,7 +17,6 @@ Bundle 'pangloss/vim-javascript'
 "comments
 Bundle 'scrooloose/nerdcommenter'
 "file tree
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
@@ -37,3 +36,4 @@ Bundle "rking/ag.vim"
 Bundle "mattn/emmet-vim"
 Bundle "ervandew/supertab"
 Bundle "tmhedberg/matchit"
+Bundle 'tpope/vim-vinegar'
