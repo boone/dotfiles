@@ -33,7 +33,7 @@ echo
 
 echo "Setting up bash environment"
 
-bash_files=( bash bashrc gitconfig git-prompt.sh )
+bash_files=( bash bashrc gitconfig )
 
 for link in ${bash_files[@]}; do
   target="`pwd`/${link}"
