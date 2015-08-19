@@ -71,5 +71,6 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y vim
     sudo apt-get install -y vim-nox
     sudo apt-get install -y git
+    chown vagrant:vagrant /usr/local/bin
   SHELL
 end

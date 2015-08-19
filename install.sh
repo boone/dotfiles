@@ -10,10 +10,10 @@ for link in ${symlinks[@]}; do
   target="`pwd`/${link}"
   link_name="${HOME}/.${link}"
   if ! [[ -L $link_name ]]; then
-    echo "    LINK - ${link_name} | TARGET - ${target}"
+    echo "    link - ${link_name} | target - ${target}"
     ln -s $target $link_name
   else
-    echo "    SKIP - ${link_name}"
+    echo "    skip - ${link_name}"
   fi
 done
 
@@ -39,9 +39,17 @@ for link in ${bash_files[@]}; do
   target="`pwd`/${link}"
   link_name="${HOME}/.${link}"
   if ! [[ -L $link_name ]]; then
-    echo "    LINK - ${link_name} | TARGET - ${target}"
+    echo "    link - ${link_name} | target - ${target}"
     ln -s $target $link_name
   else
-    echo "    SKIP - ${link_name}"
+    echo "    skip - ${link_name}"
   fi
+done
+
+echo
+
+echo "Setting custom bin files"
+for file in ~/.bash/bin/*; do
+  echo "  setting $file bin"
+  ln -s $file -t /usr/local/bin/
 done
