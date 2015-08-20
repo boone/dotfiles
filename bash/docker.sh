@@ -1,1 +1,1 @@
-alias connect_docker="eval \"$(docker-machine env default)\""
+alias connect_docker='eval \"$(docker-machine env default)\"'

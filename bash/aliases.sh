@@ -11,6 +11,7 @@ alias be='bundle exec'
 
 # Vim
 alias v='vim'
+alias vimp='vim --startuptime vim.log'
 
 # bashrc
 alias prof='cat ~/.bashrc'
