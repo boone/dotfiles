@@ -4,6 +4,8 @@
 nmap <leader>q :wq<cr>
 " Fast editing of the .vimrc
 map <leader>r :e! ~/.vimrc<cr>
+" Reload vimrc
+map <leader>z :source ~/.vimrc<cr>
 " Fast editing of the .bash_profile
 map <leader>p :e! ~/.bash_profile<cr>
 " Quickly run the current spec file

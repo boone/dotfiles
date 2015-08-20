@@ -16,7 +16,6 @@ Bundle 'pangloss/vim-javascript'
 "comments
 Bundle 'scrooloose/nerdcommenter'
 "file tree
-Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
