@@ -11,7 +11,7 @@ Vagrant:
 vagrant up
 vagrant ssh
 cd /vagrant
-./setup
+./install.sh
 ```
 
 The above commands should bring the vagrant vm up and run the setup.sh. After
