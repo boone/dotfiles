@@ -1,5 +1,7 @@
 set shell=/bin/bash
 
+let mapleader = ","
+
 set noshelltemp
 set nocompatible
 set encoding=utf-8

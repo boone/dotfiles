@@ -1,4 +1,3 @@
-let mapleader = ","
 
 " Fast saving
 " nmap <leader>s :w!<cr>
