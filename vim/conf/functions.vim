@@ -49,7 +49,7 @@ function! MapCR()
   nnoremap <cr> :call RunTestFile()<cr>
 endfunction
 call MapCR()
-nnoremap <leader>.. :call RunNearestTest()<cr>
+nnoremap <leader>/ :call RunNearestTest()<cr>
 nnoremap <leader>a :call RunTests('')<cr>
 nnoremap <leader>c :w\|:!script/features<cr>
 "nnoremap <leader>w :w\|:!script/features --profile wip<cr>
@@ -128,31 +128,19 @@ function! AlternateForCurrentFile()
   let new_file = current_file
   let in_spec = match(current_file, '^spec/') != -1
   let going_to_spec = !in_spec
-  let in_app = match(current_file, '\<reporters\>') != -1 || match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1
+  let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<workers\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1
   if going_to_spec
-    " if in_app - nossas apps
-    let new_file = substitute(new_file, '^app/', '', '')
-    " end
+    if in_app
+      let new_file = substitute(new_file, '^app/', '', '')
+    end
     let new_file = substitute(new_file, '\.e\?rb$', '_spec.rb', '')
     let new_file = 'spec/' . new_file
-    if filereadable(new_file)
-      let new_file = new_file
-    else
-      " helix_core stuff
-      let new_file = substitute(new_file, 'lib/', '', '')
-    endif
   else
     let new_file = substitute(new_file, '_spec\.rb$', '.rb', '')
     let new_file = substitute(new_file, '^spec/', '', '')
     if in_app
       let new_file = 'app/' . new_file
     end
-    if filereadable(new_file)
-      let new_file = new_file
-    else
-      " helix_core stuff
-      let new_file = substitute(new_file, 'helix_core/', 'lib/helix_core/', '')
-    endif
   endif
   return new_file
 endfunction

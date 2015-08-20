@@ -3,23 +3,20 @@
 " nmap <leader>s :w!<cr>
 nmap <leader>q :wq<cr>
 " Fast editing of the .vimrc
-map <leader>r :e! ~/.vimrc<cr>
+map <leader>ev :e! ~/.vimrc<cr>
 " Reload vimrc
-map <leader>z :source ~/.vimrc<cr>
+map <leader>er :source ~/.vimrc<cr>
 " Fast editing of the .bash_profile
 map <leader>p :e! ~/.bash_profile<cr>
 " Quickly run the current spec file
 map <Leader>g :call RunCurrentSpecFile()<CR>
-" Quickly open a file in the current directory
-map <leader>e :edit %%
 
 nnoremap <Leader>b :BufExplorer<Enter>
 nnoremap <leader>n :tabNext<Enter>
 "split a vertical window and go for it
 nnoremap <leader>w <C-w>v<C-w>l
-noremap <leader>/ :tabe ~/dotfiles/vim/snippets/ruby.snippets<cr>
-noremap <leader>// :tabe ~/.vim/bundle/vim-snippets/snippets/ruby.snippets<cr>
 nnoremap <leader>h :split<Enter><C-w>j
+noremap  <leader>r :tabe ~/.vim/snippets/ruby.snippets<cr>
 
 " open quickfix and some movements
 " TODO this mapping is colliding with the belo one. fix it.
